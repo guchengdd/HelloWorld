@@ -1,0 +1,57 @@
+﻿<Window x:Class="LottoWinner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="720" Width="500">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="30"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="Width" Value="100"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <StackPanel Orientation="Horizontal" Grid.Row="0">
+                <Label>Forelast Los:</Label>
+                <TextBox Name="Forelast1">10</TextBox>
+                <TextBox Name="Forelast2">11</TextBox>
+                <TextBox Name="Forelast3">35</TextBox>
+                <TextBox Name="Forelast4">37</TextBox>
+                <TextBox Name="Forelast5">41</TextBox>
+                <TextBox Name="Forelast6">42</TextBox>
+                <Label Width="50">Super:</Label>
+                <TextBox Name="ForeLastSuper">2</TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="1">
+                <Label>Last Los:</Label>
+                <TextBox Name="Last1">14</TextBox>
+                <TextBox Name="Last2">17</TextBox>
+                <TextBox Name="Last3">18</TextBox>
+                <TextBox Name="Last4">32</TextBox>
+                <TextBox Name="Last5">42</TextBox>
+                <TextBox Name="Last6">47</TextBox>
+                <Label Width="50">Super:</Label>
+                <TextBox Name="LastSuper">1</TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2">
+                <Button Width="120" Height="30" Margin="10" Click="Button_Click">Generate</Button>
+                <TextBox Name="NumberOfLotto" VerticalAlignment="Center">12</TextBox>
+                <Label VerticalAlignment="Center">Numbers</Label>
+            </StackPanel>
+            <Label HorizontalAlignment="Left" Grid.Row="3">Lucky Numbers:</Label>
+            
+            <TextBox Name="OutputTB" Grid.Row="4" Width="Auto" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" IsReadOnly="True"></TextBox>
+            
+        </Grid>
+    </Grid>
+</Window>
